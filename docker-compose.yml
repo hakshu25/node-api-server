@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./docker/app # Dockerfile Dir
+    image: node-api-server
+    container_name: node-api-server
+    ports:
+      - 3000:3000
+    volumes: # mount workdir
+      - .:/app
